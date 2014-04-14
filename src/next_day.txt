@@ -296,7 +296,8 @@ if slave["parfume"] = 1: slave["parfume"] = 0
 if slave["epilation"] > 0: slave["epilation"] -= 1
 if slave["manicure"] > 0: slave["manicure"] -= 1
 if slave["hairstyle"] > 0: slave["hairstyle"] -= 1
-if slave["hairstyle"] > 0: slave["hairstyle_demo"] = 1
+!убирается хардкод состояния волос, волософикс
+!if slave["hairstyle"] > 0: slave["hairstyle_demo"] = 1 
 
 ! пофиксил, была опечатка, by Lyazar
 if slave_inventory["parfume"] > 0: slave["parfume"] = 1
