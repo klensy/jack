@@ -291,6 +291,5 @@ if a > 6: rider_structure['ride_morrigan'] -= 1
 $race_finishline['ride_morrigan'] = {
 speed_points['ride_morrigan'] += RAND(18,21)
 }
-
 --- #charriots_base ---------------------------------
 
