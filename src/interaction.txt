@@ -4397,7 +4397,8 @@ IF interaction = 1474:
 END
 
 !Публичный туалет
-!Убрана потеря девственности при наказании общественным туалетом и возможность беременности - ведь рабыня становится писсуаром, и её не насилуют. Скорее всего - это ошибка копипасты наказания сверху.
+!Убрана потеря девственности при наказании общественным туалетом. Скорее всего - это ошибка копипасты наказания сверху.
+!Вероятность залететь оставлена - 1/10
 IF interaction = 1475:
  $interaction_type = 'torture'
  $place = 'marketplace'
@@ -4416,6 +4417,7 @@ IF interaction = 1475:
  $special_part = {
  $interaction_type = 'special_jpg'
  slave_rate["pride"] -= 16
+ if slave['ovulation'] > 0 and slave['pregnant'] < 1 and RAND(0, 9) = 0: slave['pregnant'] = 1
  a = RAND (1,8)
  if a > slave['stamina'] and slave['ill'] = 0: slave['ill'] = 1 
  }
