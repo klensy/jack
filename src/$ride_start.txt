@@ -48,3 +48,4 @@ $rider_name['master'] = '<<$master_name>>'
 
 GT 'ride_interface'
 --- $ride_start ---------------------------------
+
