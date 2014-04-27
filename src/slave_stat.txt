@@ -293,49 +293,33 @@ END
 
 !Закладка снаряжения
 If slave_stat_screen = 2:
- *p '<div id = "mark_one"><a href = "EXEC: slave_stat_screen = 0 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
- *p '<div id = "mark_two"><a href = "EXEC: slave_stat_screen = 1 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
- *p '<div id = "mark_three"><img src = "content\sel_button.png"></div>'
- *p '<div id = "mark_four"><a href = "EXEC: slave_stat_screen = 3 & gt curloc"><img src = "content\unsel_button.png"></a></div>'  
- *p '<div id="center_image"><img src = "content\pic\bg\page_blank.gif"></div>'
- *p '<div id = "center_text_column_1"> <center>СНАРЯЖЕНИЕ ВОСПИТУЕМОЙ</center>
- Доспехи: <<$название_предмета[$slave["armor"]]>>
- За спиной: <<$название_предмета[$slave["back_wpn"]]>>
- На поясе слева: <<$название_предмета[$slave["left_wpn"]]>> 
- На поясе справа: <<$название_предмета[$slave["right_wpn"]]>> 
- Одежда: <<$item_name[$slave["cloth"]]>>
- На голове: <<$item_name[$slave["headband"]]>>
+    *p '<div id = "mark_one"><a href = "EXEC: slave_stat_screen = 0 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
+    *p '<div id = "mark_two"><a href = "EXEC: slave_stat_screen = 1 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
+    *p '<div id = "mark_three"><img src = "content\sel_button.png"></div>'
+    *p '<div id = "mark_four"><a href = "EXEC: slave_stat_screen = 3 & gt curloc"><img src = "content\unsel_button.png"></a></div>'  
+    *p '<div id="center_image"><img src = "content\pic\bg\page_blank.gif"></div>'
+    *p '<div id = "center_text_column_1">'
+        *p '<div style = "text-align: center;">СНАРЯЖЕНИЕ ВОСПИТУЕМОЙ</div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 20 & dynamic $slave_armor_list">Доспехи: <<$название_предмета[$slave["armor"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 21 & dynamic $slave_wpn_list_large">За спиной: <<$название_предмета[$slave["back_wpn"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 22 & dynamic $slave_wpn_list">На поясе слева: <<$название_предмета[$slave["left_wpn"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 23 & dynamic $slave_wpn_list_2">На поясе справа: <<$название_предмета[$slave["right_wpn"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 24 & dynamic $slave_cloth_list">Одежда: <<$item_name[$slave["cloth"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 25 & dynamic $slave_head_list">На голове: <<$item_name[$slave["headband"]]>></a></div>'
+        *p '<br>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 26 & dynamic $slave_ears_list">В ушах: <<$item_name[$slave["earrings"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 27 & dynamic $slave_neck_list">На шее: <<$item_name[$slave["collar"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 28 & dynamic $slave_hands_list">На руках: <<$item_name[$slave["gloves"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 29 & dynamic $slave_niples_list">В сосках: <<$item_name[$slave["nipplerings"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 30 & dynamic $slave_clitor_list">В клиторе: <<$item_name[$slave["clitring"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 31 & dynamic $slave_feet_list">На ногах: <<$item_name[$slave["boots"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 32 & dynamic $slave_ring_list">Левое кольцо: <<$item_name[$slave["ring_left"]]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 33 & dynamic $slave_ring_list_2">Правое кольцо: <<$item_name[$slave["ring_right"]]>></a></div>'
+    *p '</div>'
 
- В ушах: <<$item_name[$slave["earrings"]]>>
- На шее: <<$item_name[$slave["collar"]]>>
- На руках: <<$item_name[$slave["gloves"]]>>
- В сосках: <<$item_name[$slave["nipplerings"]]>>
- В клиторе: <<$item_name[$slave["clitring"]]>>
- На ногах: <<$item_name[$slave["boots"]]>>
- Левое кольцо: <<$item_name[$slave["ring_left"]]>>
- Правое кольцо: <<$item_name[$slave["ring_right"]]>>
-</div>'
-
-*p '<div id = "ch_mark_1"><a href = "EXEC: slot = 20 & dynamic $slave_armor_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_2"><a href = "EXEC: slot = 21 & dynamic $slave_wpn_list_large"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_3"><a href = "EXEC: slot = 22 & dynamic $slave_wpn_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_4"><a href = "EXEC: slot = 23 & dynamic $slave_wpn_list_2"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_5"><a href = "EXEC: slot = 24 & dynamic $slave_cloth_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_6"><a href = "EXEC: slot = 25 & dynamic $slave_head_list"><img src = "content\next.png"></a></div>'
-
-*p '<div id = "ch_mark_7"><a href = "EXEC: slot = 26 & dynamic $slave_ears_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_8"><a href = "EXEC: slot = 27 & dynamic $slave_neck_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_9"><a href = "EXEC: slot = 28 & dynamic $slave_hands_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_10"><a href = "EXEC: slot = 29 & dynamic $slave_niples_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_11"><a href = "EXEC: slot = 30 & dynamic $slave_clitor_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_12"><a href = "EXEC: slot = 31 & dynamic $slave_feet_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_13"><a href = "EXEC: slot = 32 & dynamic $slave_ring_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_14"><a href = "EXEC: slot = 33 & dynamic $slave_ring_list_2"><img src = "content\next.png"></a></div>'
-
-*p '<div id = "center_text_column_2"> <center>ДОСТУПНЫЕ ВАРИАНТЫ</center>
-<<$equip_choice>>
-</div>'
-
+    *p '<div id = "center_text_column_2"> <center>ДОСТУПНЫЕ ВАРИАНТЫ</center>
+    <<$equip_choice>>
+    </div>'
 END
 
 If slave_stat_screen = 3:

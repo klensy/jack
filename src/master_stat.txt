@@ -135,38 +135,26 @@ END
 
 !Закладка снаряжения
 If master_stat_screen = 2:
- *p '<div id = "mark_one"><a href = "EXEC: master_stat_screen = 0 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
- *p '<div id = "mark_two"><a href = "EXEC: master_stat_screen = 1 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
- *p '<div id = "mark_three"><img src = "content\sel_button.png"></div>'
- *p '<div id = "mark_four"><a href = "EXEC: master_stat_screen = 3 & gt curloc"><img src = "content\unsel_button.png"></a></div>'  
- *p '<div id="center_image"><img src = "content\pic\bg\page_blank.gif"></div>'
- *p '<div id = "center_text_column_1"> <center>МОЁ СНАРЯЖЕНИЕ</center>
- Доспехи: <<$название_предмета[$master_armor]>>
- За спиной: <<$название_предмета[$master_back_wpn]>> 
- На поясе слева: <<$название_предмета[$master_left_wpn]>> 
- На поясе справа: <<$название_предмета[$master_right_wpn]>>
- На предплечье: <<$название_предмета[$master_arm_wpn]>> 
- За сапогом: <<$название_предмета[$master_leg_wpn]>>
-
- Одежда: <<$item_name[$master_cloth]>>
- На голове: <<$item_name[$master_head_gear]>>
- В ухе: <<$item_name[$master_earring]>>
- На шее: <<$item_name[$master_amulet]>>
- Кольцо: <<$item_name[$master_ring]>>
-</div>'
-
-*p '<div id = "ch_mark_1"><a href = "EXEC: slot = 1 & dynamic $master_armor_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_2"><a href = "EXEC: slot = 2 & dynamic $master_wpn_list_large"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_3"><a href = "EXEC: slot = 3 & dynamic $master_wpn_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_4"><a href = "EXEC: slot = 4 & dynamic $master_wpn_list_2"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_5"><a href = "EXEC: slot = 5 & dynamic $master_wpn_list_small"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_6"><a href = "EXEC: slot = 6 & dynamic $master_wpn_list_small_2"><img src = "content\next.png"></a></div>'
-
-*p '<div id = "ch_mark_7"><a href = "EXEC: slot = 7 & dynamic $master_cloth_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_8"><a href = "EXEC: slot = 8 & dynamic $master_head_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_9"><a href = "EXEC: slot = 9 & dynamic $master_ears_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_10"><a href = "EXEC: slot = 10 & dynamic $master_neck_list"><img src = "content\next.png"></a></div>'
-*p '<div id = "ch_mark_11"><a href = "EXEC: slot = 11 & dynamic $master_ring_list"><img src = "content\next.png"></a></div>'
+    *p '<div id = "mark_one"><a href = "EXEC: master_stat_screen = 0 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
+    *p '<div id = "mark_two"><a href = "EXEC: master_stat_screen = 1 & gt curloc"><img src = "content\unsel_button.png"></a></div>'
+    *p '<div id = "mark_three"><img src = "content\sel_button.png"></div>'
+    *p '<div id = "mark_four"><a href = "EXEC: master_stat_screen = 3 & gt curloc"><img src = "content\unsel_button.png"></a></div>'  
+    *p '<div id="center_image"><img src = "content\pic\bg\page_blank.gif"></div>'
+    *p '<div id = "center_text_column_1">'
+        *p '<div style = "text-align: center;">МОЁ СНАРЯЖЕНИЕ</div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 1 & dynamic $master_armor_list">Доспехи: <<$название_предмета[$master_armor]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 2 & dynamic $master_wpn_list_large">За спиной: <<$название_предмета[$master_back_wpn]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 3 & dynamic $master_wpn_list">На поясе слева: <<$название_предмета[$master_left_wpn]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 4 & dynamic $master_wpn_list_2">На поясе справа: <<$название_предмета[$master_right_wpn]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 5 & dynamic $master_wpn_list_small">На предплечье: <<$название_предмета[$master_arm_wpn]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 6 & dynamic $master_wpn_list_small_2">За сапогом: <<$название_предмета[$master_leg_wpn]>></a></div>'
+        *p '<br>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 7 & dynamic $master_cloth_list">Одежда: <<$item_name[$master_cloth]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 8 & dynamic $master_head_list">На голове: <<$item_name[$master_head_gear]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 9 & dynamic $master_ears_list">В ухе: <<$item_name[$master_earring]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 10 & dynamic $master_neck_list">На шее: <<$item_name[$master_amulet]>></a></div>'
+        *p '<div class="inventory_item"><a style = "color: black;" href = "EXEC: slot = 11 & dynamic $master_ring_list">Кольцо: <<$item_name[$master_ring]>></a></div>'
+    *p '</div>'
 
 *p '<div id = "center_text_column_2"> <center>ДОСТУПНЫЕ ВАРИАНТЫ</center>
 <<$equip_choice>>
