@@ -114,7 +114,7 @@ left:475px;
 top:150px;
 width:500px;
 height:100px;
-font-size:70%;
+font-size:70px;
 font-family:Victoriana;
 text-align:center;
 }
@@ -125,7 +125,7 @@ left:475px;
 top:210px;
 width:500px;
 height:50px;
-font-size:50%;
+font-size:50px;
 font-family:Victoriana;
 text-align:center;
 }
@@ -178,27 +178,27 @@ font-family:"Segoe Print";
 }
 
 #plain_text {
-font-size:20%;
+font-size:20px;
 font-family:Consolas;
 }
 
 #title_large {
 color:#FFD700;
-font-size:100%;
+font-size:100px;
 font-family:Victoriana;
 text-align:center;
 }
 
 #title_small {
 color:#FFD700;
-font-size:40%;
+font-size:40px;
 font-family:Victoriana;
 text-align:center;
 }
 
 #title_fix {
 color:#ff5700;
-font-size:30%;
+font-size:30px;
 font-family:Victoriana;
 text-align:center;
 }
@@ -270,7 +270,7 @@ left:460px;
 top:110px;
 width:280px;
 height:280px;
-font-size:45%;
+font-size:45px;
 font-family:Victoriana;
 }
 
@@ -321,12 +321,12 @@ position:absolute;
 left:5px;
 top:5px;
 color:#FFD700;
-font-size:30%;
+font-size:30px;
 width:180px;
 height:40px;
 font-family:Victoriana;
 /* ugly
-background-image: content/menu_button.png;*/
+background-image:url(content/menu_button.png);*/
 }
 
 #clear {
@@ -343,21 +343,21 @@ height:64px;
 #under {
 position:relative;
 color:#FFD700;
-font-size:30%;
+font-size:30px;
 width:400px;
 height:40px;
 font-family:Victoriana;
-background-image:content/menu_button.png;
+background-image:url(content/menu_button.png);
 }
 
 #under_gray {
 position:relative;
 color:#C0C0C0;
-font-size:30%;
+font-size:30px;
 width:400px;
 height:40px;
 font-family:Victoriana;
-background-image:content/menu_button.png;
+background-image:url(content/menu_button.png);
 }
 
 #intensity_05 {
@@ -407,7 +407,7 @@ top:3px;
 width:795px;
 height:595px;
 color:#FFD700;
-font-size:40%;
+font-size:40px;
 text-align:center;
 font-family:Victoriana;
 }
@@ -419,7 +419,7 @@ top:20px;
 width:770px;
 height:575px;
 color:#0000CD;
-font-size:30%;
+font-size:30px;
 font-family:Victoriana;
 }
 
@@ -429,7 +429,7 @@ left:5px;
 top:610px;
 width:790px;
 height:185px;
-font-size:25%;
+font-size:25px;
 }
 
 #bg_blue_script {
@@ -438,7 +438,7 @@ left:30px;
 top:20px;
 width:770px;
 height:575px;
-font-size:20%;
+font-size:20px;
 font-family:"Segoe Print";
 color:#191970;
 }
@@ -449,7 +449,7 @@ left:255px;
 top:28px;
 width:770px;
 height:570px;
-font-size:17%;
+font-size:17px;
 font-family:"Segoe Print";
 color:#191970;
 }
@@ -460,7 +460,7 @@ left:450px;
 top:190px;
 width:350px;
 height:345px;
-font-size:20%;
+font-size:20px;
 font-family:"Segoe Print";
 color:#191970;
 }
@@ -511,7 +511,7 @@ left:15px;
 top:1px;
 width:1000px;
 height:20px;
-font-size:25%;
+font-size:25px;
 font-family:Victoriana;
 }
 
@@ -529,7 +529,7 @@ left:815px;
 top:10px;
 width:450px;
 height:790px;
-font-size:30%;
+font-size:30px;
 font-family:Victoriana;
 }
 
@@ -539,7 +539,7 @@ left:835px;
 top:200px;
 width:440px;
 height:790px;
-font-size:20%;
+font-size:20px;
 font-family:"Segoe Print";
 color:#191970;
 }
@@ -559,7 +559,7 @@ left:1030px;
 top:180px;
 width:240px;
 height:80px;
-font-size:13%;
+font-size:13px;
 font-family:"Segoe Print";
 text-align:center;
 }
@@ -579,7 +579,7 @@ left:1030px;
 top:435px;
 width:240px;
 height:80px;
-font-size:13%;
+font-size:13px;
 font-family:"Segoe Print";
 text-align:center;
 }
@@ -599,7 +599,7 @@ left:1030px;
 top:685px;
 width:240px;
 height:80px;
-font-size:13%;
+font-size:13px;
 font-family:"Segoe Print";
 text-align:center;
 }
@@ -647,7 +647,7 @@ top:40px;
 width:745px;
 height:585px;
 color:#0000CD;
-font-size:18%;
+font-size:18px;
 font-family:Philosopher;
 }
 
@@ -685,7 +685,7 @@ width:230px;
 height:596px;
 color:#FFD700;
 font-family:"Segoe Print";
-background-image:content/padding.png;
+background-image:url(content/padding.png);
 }
 
 #right_padding {
@@ -696,7 +696,7 @@ width:200px;
 height:596px;
 color:#FFD700;
 font-family:"Segoe Print";
-background-image:content/padding.png;
+background-image:url(content/padding.png);
 text-align:right;
 }
 
@@ -1386,7 +1386,7 @@ left:80px;
 top:15px;
 width:250px;
 height:100px;
-font-size:35%;
+font-size:35px;
 color:#FFD700;
 font-family:Victoriana;
 }
@@ -1505,7 +1505,7 @@ width:680px;
 height:480px;
 color:#f2e8c9;
 text-align:center;
-background-image:content/padding.png;
+background-image:url(content/padding.png);
 }
 
 #fight_options {
@@ -1551,7 +1551,7 @@ top:50px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #rider2_pic {
@@ -1561,7 +1561,7 @@ top:300px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #rider3_pic {
@@ -1571,7 +1571,7 @@ top:555px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #rider4_pic {
@@ -1581,7 +1581,7 @@ top:50px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #rider5_pic {
@@ -1591,7 +1591,7 @@ top:300px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #rider6_pic {
@@ -1601,7 +1601,7 @@ top:555px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #rider1_name {
@@ -1719,7 +1719,7 @@ top:50px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #enemy_pic {
@@ -1729,7 +1729,7 @@ top:50px;
 width:150px;
 height:150px;
 text-align:center;
-background-image:content/a.jpg;
+background-image:url(content/a.jpg);
 }
 
 #ally_name {
@@ -1811,7 +1811,7 @@ top:250px;
 width:40px;
 height:40px;
 text-align:center;
-background-image:content/hart_red.png;
+background-image:url(content/hart_red.png);
 }
 
 #ally_stamina {
@@ -1821,7 +1821,7 @@ top:250px;
 width:40px;
 height:40px;
 text-align:center;
-background-image:content/hart_green.png;
+background-image:url(content/hart_green.png);
 }
 
 #ally_will {
@@ -1831,7 +1831,7 @@ top:250px;
 width:40px;
 height:40px;
 text-align:center;
-background-image:content/hart_purple.png;
+background-image:url(content/hart_purple.png);
 }
 
 #enemy_health {
@@ -1841,7 +1841,7 @@ top:250px;
 width:40px;
 height:40px;
 text-align:center;
-background-image:content/hart_red.png;
+background-image:url(content/hart_red.png);
 }
 
 #enemy_stamina {
@@ -1851,7 +1851,7 @@ top:250px;
 width:40px;
 height:40px;
 text-align:center;
-background-image:content/hart_green.png;
+background-image:url(content/hart_green.png);
 }
 
 #enemy_will {
@@ -1861,7 +1861,7 @@ top:250px;
 width:40px;
 height:40px;
 text-align:center;
-background-image:content/hart_purple.png;
+background-image:url(content/hart_purple.png);
 }
 
 #ally_conditions {
@@ -1888,7 +1888,7 @@ left:1000px;
 top:90px;
 width:250px;
 height:400px;
-font-size:30%;
+font-size:30px;
 font-family:Victoriana;
 }
 
@@ -1906,7 +1906,7 @@ left:1000px;
 top:340px;
 width:250px;
 height:400px;
-font-size:30%;
+font-size:30px;
 font-family:Victoriana;
 }
 
@@ -1924,7 +1924,7 @@ left:815px;
 top:270px;
 width:450px;
 height:790px;
-font-size:30%;
+font-size:30px;
 font-family:Victoriana;
 }
 
