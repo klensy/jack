@@ -35,6 +35,23 @@ IF slave_state = 2:
  END
 END
 '
+
+!Шаблон для менюшек, хорошо бы вынести в отдельный файл (как и все шаблоны)
+!TODO: замутить так для всех меню
+!например:
+! dynamic $gen_menu_item, '$text_display', 1, 'Заняться воспитуемой', "menu_form = 1 & gt 'menu_form'"
+! dynamic $gen_menu_item, '$text_display', 0, 'Заняться воспитуемой', "menu_form = 1 & gt 'menu_form'"
+! если 0 - то можно не писать последний аргумент, т.к. выводится все равно не будет
+$gen_menu_item = {
+    if args[1] = 0:
+        dynamic '<<$args[0]>> += {<br><div id="under_gray"><<$args[2]>><br></div>}'
+    else:
+        dynamic '<<$args[0]>> += {<br><div id="under"><<$args[2]>><br><div id = "clear"><a href = "EXEC: <<$args[3]>>"><img src = "content\clear.gif"></a></div></div>}'
+    end
+}
+
+
+
 !'Пункт меню - пустой
  $text_display += {<br><div id="under_gray">Деалать <br></div>}
 
@@ -66,36 +83,36 @@ END
 IF menu_form = 0:
  $place = 'home_lux'
  IF slave_state = CONST_INT['slave_exist']:
-  $text_display += {<br><div id="under">Заняться воспитуемой <br><div id = "clear"><a href = 'EXEC: menu_form = 1 & gt "menu_form"'><img src = "content\clear.gif"></a></div></div>}
-  else
-  $text_display += {<br><div id="under_gray">Заняться воспитуемой<br></div>}
+  dynamic $gen_menu_item, '$text_display', 1, 'Заняться воспитуемой', "menu_form = 1 & gt 'menu_form'"
+ else
+  dynamic $gen_menu_item, '$text_display', 0, 'Заняться воспитуемой'
  END
- $text_display += {<br><div id="under">Выйти из дома<br><div id = "clear"><a href = 'EXEC: city_form = estate_location[$estate] & gt "city_menu_form"'><img src = "content\clear.gif"></a></div></div>}
- $text_display += {<br><div id="under">Бытовые вопросы <br><div id = "clear"><a href = 'EXEC: menu_form = 3 & gt "menu_form"'><img src = "content\clear.gif"></a></div></div>}
+ dynamic $gen_menu_item, '$text_display', 1, 'Выйти из дома', "city_form = estate_location[$estate] & gt 'city_menu_form'"
+ dynamic $gen_menu_item, '$text_display', 1, 'Бытовые вопросы', "menu_form = 3 & gt 'menu_form'"
  IF sparks > 0:
-  $text_display += {<br><div id="under">Сотворить заклинание<br><div id = "clear"><a href = 'EXEC: menu_form = 6 & gt "menu_form"'><img src = "content\clear.gif"></a></div></div>}
+  dynamic $gen_menu_item, '$text_display', 1, 'Сотворить заклинание', "menu_form = 6 & gt 'menu_form'"
   else
-  $text_display += {<br><div id="under_gray">Сотворить заклинание<br></div>}
+  dynamic $gen_menu_item, '$text_display', 0, 'Сотворить заклинание'
  END
  IF assistant_state = 1:
-  $text_display += {<br><div id="under">Поручения ассистентке <br><div id = "clear"><a href = 'EXEC: menu_form = 4 & gt "menu_form"'><img src = "content\clear.gif"></a></div></div>}
+  dynamic $gen_menu_item, '$text_display', 1, 'Поручения ассистентке', "menu_form = 4 & gt 'menu_form'"
   else
   IF slave_state = CONST_INT['slave_exist'] and slave["moral"] => 3:
-   $text_display += {<br><div id="under">Назначить ассистентку <br><div id = "clear"><a href = 'EXEC: gt "slave_to_assistant"'><img src = "content\clear.gif"></a></div></div>}
+   dynamic $gen_menu_item, '$text_display', 1, 'Назначить ассистентку', "gt 'slave_to_assistant'"
    else
-   $text_display += {<br><div id="under_gray">Назначить ассистентку<br></div>}
+   dynamic $gen_menu_item, '$text_display', 0, 'Назначить ассистентку'
   END
  END
  IF slave_state = CONST_INT['slave_exist']:
-  $text_display += {<br><div id="under">Поручения воспитуемой <br><div id = "clear"><a href = 'EXEC: menu_form = 5 & gt "menu_form"'><img src = "content\clear.gif"></a></div></div>}
+  dynamic $gen_menu_item, '$text_display', 1, 'Поручения воспитуемой', "menu_form = 5 & gt 'menu_form'"
   else
   IF assistant_state = 1:
-   $text_display += {<br><div id="under">Обучать ассистентку <br><div id = "clear"><a href = 'EXEC: gt "slave_to_assistant"'><img src = "content\clear.gif"></a></div></div>}
+   dynamic $gen_menu_item, '$text_display', 1, 'Обучать ассистентку', "gt 'slave_to_assistant'"
    else
-   $text_display += {<br><div id="under_gray">Поручения воспитуемой<br></div>}
+   dynamic $gen_menu_item, '$text_display', 0, 'Поручения воспитуемой'
   END
  END  
- $text_display += {<br><div id="under">Конец рабочего дня <br><div id = "clear"><a href = "EXEC: gt 'next_day'"><img src = "content\clear.gif"></a></div></div>}
+ dynamic $gen_menu_item, '$text_display', 1, 'Конец рабочего дня', "gt 'next_day'"
  !$text_display += '<br><div id="under_gray">Калории: <<slave["calories"]>>/ Истощение: <<slave["starvation"]>> / жЫр <<slave_rate["fat"]>><br></div>'
 END
 
