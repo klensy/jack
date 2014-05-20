@@ -544,6 +544,19 @@ font-family:"Segoe Print";
 color:#191970;
 }
 
+/* copy&paste from #side_panel_text with some changes,
+   possible replace for it later
+**/
+#side_panel_text_2 {
+left:835px;
+top:200px;
+width:440px;
+height:790px;
+font-size:20px;
+font-family:"Segoe Print";
+color:#191970;
+}
+
 #master_short_ava {
 position:absolute;
 left:1075px;

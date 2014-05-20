@@ -36,26 +36,29 @@ IF $place = 'gastronom':
 END
 
 if npc = 0:
- $info_bar = ''
- *p '<div id = "side_panel_main"><center><div style="font-size: 50px;"><<$place_name[$place]>></div>
-<<$place_location[$place]>>
-
- Информация к размышлению:
- </center></div>'
- *p '<div id = "side_panel_text">  <<$place_info[$place]>>
-</div>'  
- else
- $info_bar = '' 
- *p '<div id = "bg"><img src="content\pic\characters\<<$npc_image[$npc_id]>>.gif"></div>' 
- *p '<div id = "side_panel_main"><center><div style="font-size: 50px;"><<$npc_name[$npc_id]>></div>
-<<$npc_status[$npc_id]>>
-
-Информация к размышлению:
-</center></div>'
- *p '<div id = "side_panel_text">  <<$npc_attitude[npc_attitude[$npc_id]]>>
-
- <<$npc_info[$npc_id]>>
-</div>'
+    $info_bar = ''
+    *p '<div id = "side_panel_main">'
+        *p '<center>'
+            *p '<div style="font-size: 50px;"><<$place_name[$place]>></div>'
+            *p '<<$place_location[$place]>><br>'
+            *p 'Информация к размышлению:'
+        *p '</center>'
+    *p '</div>'
+    *p '<div id = "side_panel_text">  <<$place_info[$place]>>'
+    *p '</div>'  
+else
+    $info_bar = '' 
+    *p '<div id = "bg"><img src="content\pic\characters\<<$npc_image[$npc_id]>>.gif"></div>' 
+    *p '<div id = "side_panel_main">'
+        *p '<center>'
+            *p '<div style="font-size: 50px;"><<$npc_name[$npc_id]>></div>'
+            *p '<<$npc_status[$npc_id]>><br>'
+            *p 'Информация к размышлению:'
+        *p '</center>'
+    *p '</div>'
+    *p '<div id = "side_panel_text">  <<$npc_attitude[npc_attitude[$npc_id]]>>'
+        *p '<<$npc_info[$npc_id]>>'
+    *p '</div>'
 END
 
 *p '<div id = "bg"><img src="content\pic\bg\<<$bg[$place]>>.jpg"></div>'
