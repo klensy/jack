@@ -219,14 +219,14 @@ If teach_stat_screen = 1:
  $right_text_list = '' 
  
  IF house_mess > 0 and slave['service'] < 5:
-  $left_text_list += "<p><a href = 'EXEC: interaction = 1711 & gt ""interaction""'><<$service_lesson[slave[""service""]]>></a><p>"
+  $left_text_list += "<p><a href = 'EXEC: interaction = 1711 & gt ""interaction""'><<$service_lesson[slave[""service""]]>></a></p>"
   else
-  $left_text_list += '<p><<$service_lesson[6]>><p>'
+  $left_text_list += '<p><<$service_lesson[6]>></p>'
  END
  IF kitchen > 0 and slave['cook'] < 5:
-  $left_text_list += "<p><a href = 'EXEC: interaction = 1712 & gt ""interaction""'><<$cook_lesson[slave[""cook""]]>></a><p>"
+  $left_text_list += "<p><a href = 'EXEC: interaction = 1712 & gt ""interaction""'><<$cook_lesson[slave[""cook""]]>></a></p>"
   else
-  $left_text_list += '<p><<$cook_lesson[6]>><p>'
+  $left_text_list += '<p><<$cook_lesson[6]>></p>'
  END 
  IF slave['nurse'] < 5:  
   $left_text_list += "<p><a href = 'EXEC: interaction = 1713 & gt ""interaction""'><<$nurse_lesson[slave[""nurse""]]>></a></p>"  
@@ -236,7 +236,7 @@ If teach_stat_screen = 1:
  IF slave["stamina"] > 1 and slave['callisthenics'] < 5: 
   $left_text_list += "<p><a href = 'EXEC: interaction = 1722 & gt ""interaction""'><<$dance_lesson[slave[""callisthenics""]]>></a></p>" 
   else
-  $left_text_list += '<p><<$dance_lesson[6]>><p>'
+  $left_text_list += '<p><<$dance_lesson[6]>></p>'
  END  
  IF slave['music'] < 5:   
   $left_text_list += "<p><a href = 'EXEC: interaction = 1732 & gt ""interaction""'><<$music_lesson[slave[""music""]]>></a></p>" 
